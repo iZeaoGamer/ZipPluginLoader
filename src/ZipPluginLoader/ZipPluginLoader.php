@@ -165,7 +165,7 @@ class ZipPluginLoader implements PluginLoader{
 	 *
 	 * @return array
 	 */
-	public function getPluginFilters() string{//@API
+	public function getPluginFilters() : string{//@API
 		return "/\\.zip$/i";
 	}
 	/**
