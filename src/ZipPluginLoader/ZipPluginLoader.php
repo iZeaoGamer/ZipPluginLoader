@@ -57,7 +57,7 @@ class ZipPluginLoader implements PluginLoader{
 	 *
 	 * @return Plugin
 	 */
-	public function loadPlugin($file){//@API
+	public function loadPlugin(string $file){//@API
 		if (substr($file,0,strlen(self::PREFIX)) == self::PREFIX) {
 			if (substr($file,-strlen(self::CANARY)) == self::CANARY) {
 				// This is an internal path
