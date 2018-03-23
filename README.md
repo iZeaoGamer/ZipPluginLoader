@@ -1,3 +1,5 @@
+[![HitCount](http://hits.dwyl.io/YTiStrafeNubzHD/ZipPluginLoader.svg)](http://hits.dwyl.io/YTiStrafeNubzHD/ZipPluginLoader)
+
 <!-- template: startup.md -->
 
 
