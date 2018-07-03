@@ -5,7 +5,7 @@ use pocketmine\plugin\PluginLoadOrder;
 
 class Main extends PluginBase {
 	const LOADER = "ZipPluginLoader\\ZipPluginLoader";
-	public function onEnable(){
+	public function onEnable() : void{
 		if (!in_array("myzip",stream_get_wrappers())) {
 			if (!stream_wrapper_register("myzip",__NAMESPACE__."\\MyZipStream")) {
 				$this->getLogger()->error("Unable to register Zip wrapper");
@@ -17,7 +17,7 @@ class Main extends PluginBase {
 		$this->getServer()->getPluginManager()->loadPlugins($this->getServer()->getPluginPath(), ["ZipPluginLoader\\ZipPluginLoader"]);
 		$this->getServer()->enablePlugins(PluginLoadOrder::STARTUP);
 	}
-	public function onDisable() {
+	public function onDisable() : void{
 		foreach ($this->getServer()->getPluginManager()->getPlugins() as $p) {
 			if ($p->isDisabled()) continue;
 			if (get_class($p->getPluginLoader()) == self::LOADER) {
