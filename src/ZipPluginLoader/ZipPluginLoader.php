@@ -368,4 +368,13 @@ class ZipPluginLoader implements PluginLoader{
 		}
 		return dirname($ff);
 	}
+	
+	public function canLoadPlugin(string $path): bool {
+        
+    }
+
+    	public function getAccessProtocol(): string {
+        
+    }
+
 }
